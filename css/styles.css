@@ -121,7 +121,12 @@ img {
 .hero {
   padding: 188px 0;
   background-color: #2e2f42;
+  background-image:url(../images/background-hero.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1440px;
 }
+
 .hero_title {
   color: #fff;
   font-size: 56px;
