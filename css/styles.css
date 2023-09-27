@@ -121,10 +121,17 @@ img {
 .hero {
   padding: 188px 0;
   background-color: #2e2f42;
-  background-image:url(../images/background-hero.jpg);
+  background-image: linear-gradient(
+      to bottom,
+      rgba(128, 128, 128, 0.7),
+      rgba(128, 128, 128, 0.7)
+    ),
+    url(../images/background-hero.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 1440px;
+}
+.hero__container {
 }
 
 .hero_title {
@@ -209,6 +216,9 @@ img {
   background-color: #ffffff;
   border-radius: 0px 0px 4px 4px;
   flex-basis: calc((100% - 72px) / 4);
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 .box__subtitle {
   padding: 32px 0;
@@ -219,6 +229,26 @@ img {
 }
 .teamcard__text {
   text-align: center;
+}
+.icon__soc__list {
+  display: flex;
+  gap: 24px;
+}
+.icon__soc__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #4d5ae5;
+}
+.icon__soc__item {
+}
+.icon__teamcard {
+  fill: #fff;
+}
+.box__soc__icons {
 }
 /**! SECTION PORTFOLIO !**/
 .portfolio__container {
@@ -242,6 +272,11 @@ img {
 }
 .portfolio__item {
   width: calc((100% - 48px) / 3);
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+.portfolio__images {
 }
 .portfolio__box {
   border: 1px solid #e7e9fc;
@@ -251,8 +286,31 @@ img {
 .portfolio__subtitle {
   margin-bottom: 8px;
 }
+.portfolio__img__box {
+}
+.overlay {
+  color: #f4f4fd;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  padding: 40px 32px 164px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #3f51b5;
+  transform: translateY(100%);
+  transition: transform 250ms ease-in-out;
+}
+.portfolio__item:hover .overlay,
+.portfolio__item:focus .overlay {
+  transform: translateY(0);
+}
 /* FOOTER */
 .footer {
+  display: flex;
   padding: 100px 0;
   background: #2e2f42;
 }
