@@ -93,6 +93,7 @@ img {
   position: relative;
   color: #404bbf;
   border-radius: 2px;
+  transition: color 1250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav__link::after {
   content: "";
@@ -101,6 +102,7 @@ img {
   bottom: -1px;
   height: 4px;
   background-color: #404bbf;
+  border-radius: 2px; 
 }
 .nav__link:hover,
 .nav__link:focus {
@@ -135,8 +137,6 @@ img {
 /*MAIN*/
 /**! SECTION HERO !**/
 .hero {
-}
-.hero__container {
   padding: 188px 0;
   background-color: #2e2f42;
   background-image: linear-gradient(
@@ -148,6 +148,9 @@ img {
   background-position: center;
   background-size: cover;
   max-width: 1440px;
+  margin: 0 auto;
+}
+.hero__container {
 }
 
 .hero_title {
